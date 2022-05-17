@@ -1,0 +1,122 @@
+.footer__social {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--contrast-text-color);
+  background-color: var(--brand-background);
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+/* --- address --- */
+
+.contact {
+  display: inline-block;
+
+  color: var(--contrast-text-color);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* --- list of contacts --- */
+
+.address__link {
+  color: var(--contrast-text-color);
+
+  transition: color $trans;
+
+  &:hover,
+  &:focus {
+    color: var(--brand-accent-color);
+  }
+}
+
+.contact__link {
+  @extend .address__link;
+  opacity: 60%;
+}
+
+.contact__item:not(:last-child) {
+  display: block;
+  margin-bottom: 9px;
+}
+
+/* блок "присоединяйтесь" */
+
+.footer__social {
+  margin-left: 70px;
+
+  & .social {
+    margin-top: 20px;
+  }
+}
+
+.footer__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  @include textParam(1.17, 0.03em);
+
+  color: var(--contrast-text-color);
+}
+
+/* -------Subscription------- */
+
+.subscription {
+  margin-left: 93px;
+}
+
+.subscription__input {
+  display: block;
+  margin-top: 20px;
+  margin-right: 12px;
+  padding-left: 16px;
+  height: 50px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--contrast-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+
+  @include textParam(1.25);
+
+  transition: border-color $trans;
+
+  &:focus {
+    outline: transparent;
+    border-color: var(--brand-accent-color);
+  }
+  &:not(:placeholder-shown) {
+    background-color: transparent;
+  }
+}
+
+.subcription__email {
+  display: flex;
+}
+
+.subscription__button {
+  @include flexCenter();
+  height: 50px;
+  width: 200px;
+  margin-top: 20px;
+
+  background-color: var(--brand-accent-color);
+  color: var(--contrast-text-color);
+
+  transition: background-color $trans;
+
+  &:hover {
+    background-color: var(--accent-color-hover);
+  }
+}
+
+.subscription__icon {
+  display: inline-block;
+  margin-left: 10px;
+  fill: white;
+}

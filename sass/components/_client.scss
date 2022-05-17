@@ -1,0 +1,30 @@
+.client__button {
+  display: block;
+  margin-bottom: 100px;
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.client__link {
+  @include flexCenter();
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons-gray);
+  border-radius: 4px;
+
+  color: var(--icons-gray);
+
+  transition: color $trans, border $trans;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--brand-accent-color);
+    color: var(--brand-accent-color);
+  }
+}
+
+.client__icon {
+  @extend %icon;
+}

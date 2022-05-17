@@ -1,0 +1,57 @@
+.list--flex {
+  display: flex;
+}
+
+.container {
+  width: 1200px;
+  padding: 0px 15px;
+  /* outline: 2px solid tomato; */
+  margin-left: auto;
+  margin-right: auto;
+
+  &--flex {
+    display: flex;
+  }
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section--no-padding {
+  padding-bottom: 0px;
+}
+
+.section__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--title-text-color);
+  text-align: center;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.icon--media {
+  margin-right: 10px;
+}
+
+.photo {
+  display: block;
+}
+
+@mixin flexCenter($type: flex, $x-axis: center, $y-axis: center) {
+  display: $type;
+  justify-content: $x-axis;
+  align-items: $y-axis;
+}
+
+@mixin textParam($line: 1.56, $space: 0.03em) {
+  line-height: $line;
+  letter-spacing: $space;
+}

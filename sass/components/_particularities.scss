@@ -1,0 +1,26 @@
+.icon__plate {
+  @include flexCenter();
+
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--second-background);
+}
+
+.particularity__title {
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+
+  margin-bottom: 10px;
+}
+
+.particularity__text {
+  color: var(--primary-text-color);
+}
+
+.particularity:not(:last-child) {
+  width: 270px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,52 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-height: 581px;
+  width: 528px;
+  background-color: var(--contrast-text-color);
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform $trans;
+
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.button-close {
+  @include flexCenter();
+  
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  height: 30px;
+  width: 30px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding: 0px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+
+  background-color: var(--contrast-text-color);
+  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon-close {
+  fill: var(--title-text-color);
+  transition: fill $trans;
+
+  .button-close:hover > &,
+  .button-close:focus > & {
+    fill: var(--brand-accent-color);
+  }
+}

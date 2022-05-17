@@ -1,0 +1,32 @@
+.logo {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  @include textParam(1.2);
+
+  color: var(--brand-black);
+
+  span {
+    color: var(--brand-accent-color);
+  }
+
+  &:visited {
+    color: var(--brand-black);
+  }
+
+  &--preceding {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo--negative {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--contrast-text-color);
+
+  &:visited {
+    color: var(--contrast-text-color);
+  }
+}

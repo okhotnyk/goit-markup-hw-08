@@ -1,0 +1,58 @@
+.nav__site-nav {
+  display: flex;
+}
+
+.nav__item {
+  font-weight: 500;
+  @include textParam(1.2, 0.02em);
+
+  & ~ & {
+    margin-left: 50px;
+  }
+}
+
+.nav__link {
+  display: block;
+  position: relative;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+
+  transition: color $trans;
+
+  &:hover,
+  &:focus,
+  &--current {
+    color: var(--brand-accent-color);
+  }
+
+  &--current::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--brand-accent-color);
+  }
+}
+
+.nav__contact {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  color: var(--primary-text-color);
+
+  transition: color $trans;
+
+  &:hover,
+  &:focus {
+    color: var(--brand-accent-color);
+  }
+}
