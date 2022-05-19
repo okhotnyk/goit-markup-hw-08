@@ -3,20 +3,32 @@
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0px 15px;
-  /* outline: 2px solid tomato; */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   &--flex {
     display: flex;
   }
+
+  @media screen and (min-width: 480px) {
+    width: 480px
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section--no-padding {
@@ -43,6 +55,8 @@
 
 .photo {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @mixin flexCenter($type: flex, $x-axis: center, $y-axis: center) {
