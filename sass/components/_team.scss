@@ -3,19 +3,18 @@
 }
 
 .team__list {
+  margin: -30px;
+
   @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
-      margin: -15px;
+      justify-content: center;
     }
 }
 
 .team__card {
   max-width: 450px;
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  margin: 30px auto;
 
   background-color: var(--contrast-text-color);
   font-size: 16px;
@@ -29,22 +28,35 @@
 
     
     @media screen and (min-width: 768px) {
-    width: calc(100% / 2 - 60px);
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
+    
+    &:nth-last-child(-n+2) {
     margin-bottom: 30px;
+    }
    }
-}
+
+     @media screen and (min-width: 1200px) {
+       width: calc(100% / 4 - 120px);
+       margin: 15px;
+     }
+  }
 
 .team__text {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  font-size: 16px;
+  line-height: 1.17;
 }
 
 .team__name {
   margin-bottom: 10px;
 
   font-weight: 500;
+ 
   color: var(--title-text-color);
 }
 

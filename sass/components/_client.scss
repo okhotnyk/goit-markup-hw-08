@@ -1,15 +1,54 @@
-.client__button {
-  display: block;
-  margin-bottom: 100px;
-
-  &:last-of-type {
-    margin-bottom: 0px;
+.client__list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: -15px;
   }
 }
 
+
+.client__button { 
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: calc(100% / 2 - 15px);
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-child(-n+2)) {
+      margin-top: 30px;
+    }
+  }
+    
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc(100% / 3 - 20px);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-child(-n+3)) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 6 - 25px);
+    
+    &:not(:nth-child(6n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-child(-n+6)) {
+      margin-top: 30px;
+    }
+  }
+}
+
+
 .client__link {
   @include flexCenter();
-  width: 170px;
+  width: 100%;
   height: 92px;
   border: 1px solid var(--icons-gray);
   border-radius: 4px;

@@ -59,6 +59,13 @@
   height: auto;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
 @mixin flexCenter($type: flex, $x-axis: center, $y-axis: center) {
   display: $type;
   justify-content: $x-axis;
