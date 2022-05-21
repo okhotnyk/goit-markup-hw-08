@@ -3,18 +3,25 @@
 }
 
 .team__list {
-  margin: -30px;
 
-  @media screen and (min-width: 768px) {
+  margin-bottom: 0px;
+
+  @include tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
+  @include desktop {
+    margin-left: 0;
+  }  
 }
 
 .team__card {
+  width: 100%;
   max-width: 450px;
-  margin: 30px auto;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  
 
   background-color: var(--contrast-text-color);
   font-size: 16px;
@@ -27,19 +34,27 @@
   border-radius: 0px 0px 4px 4px;
 
     
-    @media screen and (min-width: 768px) {
-    width: calc(100% / 2 - 30px);
-    margin: 15px;
-    
-    &:nth-last-child(-n+2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
+
+    &:nth-child(even) {
+    margin-left: 30px;
     }
+
+    &:nth-last-child(-n+2) {
+    margin-bottom: 0px;
+    }
+
    }
 
-     @media screen and (min-width: 1200px) {
-       width: calc(100% / 4 - 120px);
-       margin: 15px;
-     }
+   @include desktop {
+    width: calc((100% - 90px) / 4);
+
+    &:not(:last-child) {
+    margin-right: 30px;
+    }
+   }
   }
 
 .team__text {

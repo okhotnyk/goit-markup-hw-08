@@ -7,20 +7,20 @@
   padding: 0px 15px;
   margin: 0 auto;
 
+  @include phone {
+    width: 480px;
+  }
+      
+  @include tablet {
+    width: 768px;
+  }
+      
+  @include desktop {
+    width: 1200px;
+  }
+
   &--flex {
     display: flex;
-  }
-
-  @media screen and (min-width: 480px) {
-    width: 480px
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px
   }
 }
 
@@ -29,6 +29,11 @@
   padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section--no-padding {
@@ -36,13 +41,19 @@
 }
 
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.14;
   color: var(--title-text-color);
   text-align: center;
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .icon {
@@ -66,13 +77,4 @@ img {
 }
 
 
-@mixin flexCenter($type: flex, $x-axis: center, $y-axis: center) {
-  display: $type;
-  justify-content: $x-axis;
-  align-items: $y-axis;
-}
 
-@mixin textParam($line: 1.56, $space: 0.03em) {
-  line-height: $line;
-  letter-spacing: $space;
-}

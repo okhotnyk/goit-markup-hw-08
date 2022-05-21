@@ -1,29 +1,39 @@
 .particularity__list {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+  }
+
+  @include desktop{
+    flex-wrap: nowrap;
+    margin-bottom: 0px
   }
 }
 
 .particularity {
-  max-width: 480px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
 
   &:not(:last-child) {
    margin-bottom: 30px;
 }
-  @media screen and (min-width: 768px) {
-    width: calc(100%/2 - 60px);
-    padding-left: 0px;
-    padding-right: 0px;
+@media screen and (min-width: 768px) and  (max-width: 1199.98px){
+  width: calc((100% - 30px)/2);
+  
+    &:nth-child(even) {
+    margin-left: 30px;
+    }
+    &:not(:nth-child(-n+2)) {
+    margin-bottom: 0px;
+    }
 }
 
-  @media screen and (min-width: 1200px) {
-    width: calc(100%/4 - 120px);
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
     }
 }
 

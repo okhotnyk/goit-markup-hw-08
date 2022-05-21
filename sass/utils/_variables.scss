@@ -21,4 +21,34 @@ $secondary-font: "Raleway", sans-serif;
 
 $mobile: 480px;
 
+@mixin flexCenter($type: flex, $x-axis: center, $y-axis: center) {
+  display: $type;
+  justify-content: $x-axis;
+  align-items: $y-axis;
+}
+
+@mixin textParam($line: 1.56, $space: 0.03em) {
+  line-height: $line;
+  letter-spacing: $space;
+}
+
+@mixin phone { 
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}  
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+
 
