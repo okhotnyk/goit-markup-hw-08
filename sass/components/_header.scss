@@ -1,10 +1,19 @@
 .header {
-  // max-width: 480px;
+  max-width: 480px;
   display: flex;
   align-items: center;
 
   height: 60px;
 
   border-bottom: 1px solid var(--border-line-color);
+
+  @include tablet {
+    max-width: 768px;
+    height: 80px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 

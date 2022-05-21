@@ -3,8 +3,11 @@
   top: 50%;
   left: 50%;
 
-  min-height: 581px;
-  width: 528px;
+  min-height: 610px;
+  max-width: 450px;
+  // margin-top: 93px;
+
+  overflow-y: scroll;
   background-color: var(--contrast-text-color);
 
   transform: translate(-50%, -50%) scale(1);

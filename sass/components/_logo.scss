@@ -15,9 +15,13 @@
   }
 
   &--preceding {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    @include tablet {
+    margin-right: 88px;
+    }
+
+    @include desktop {
+      margin-right: 93px;
+    }
   }
 }
 

@@ -296,6 +296,7 @@ img {
 }
 
 .header {
+  max-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,6 +305,17 @@ img {
           align-items: center;
   height: 60px;
   border-bottom: 1px solid var(--border-line-color);
+}
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 768px;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    max-width: 1200px;
+  }
 }
 
 .logo {
@@ -320,10 +332,15 @@ img {
 .logo:visited {
   color: var(--brand-black);
 }
-.logo--preceding {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+@media screen and (min-width: 768px) {
+  .logo--preceding {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo--preceding {
+    margin-right: 93px;
+  }
 }
 
 .logo--negative {
@@ -336,6 +353,123 @@ img {
 }
 .logo--negative:visited {
   color: var(--contrast-text-color);
+}
+
+.nav__site-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__item {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .nav__cont-nav .nav__item {
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  .nav__site-nav .nav__item ~ .nav__item {
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .nav__cont-nav .nav__item ~ .nav__item {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link {
+    display: none;
+    display: block;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--title-text-color);
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav__link:hover, .nav__link:focus, .nav__link--current {
+    color: var(--brand-accent-color);
+  }
+  .nav__link--current::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--brand-accent-color);
+  }
+}
+
+.cont-nav__link {
+  display: none;
+  color: var(--primary-text-color);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .cont-nav__link {
+    display: inline;
+  }
+}
+
+.cont-nav__link:hover,
+.cont-nav__link:focus {
+  color: var(--brand-accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .nav__cont-nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav__cont-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: var(--primary-text-color);
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav__cont-nav:hover, .nav__cont-nav:focus {
+    color: var(--brand-accent-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__cont-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .hero {
@@ -409,6 +543,23 @@ img {
 .menu-button {
   margin-left: auto;
 }
+.menu-button:hover, .menu-button:focus {
+  color: var(--brand-accent-color);
+}
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
 
 .backdrop {
   position: fixed;
@@ -434,8 +585,9 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-height: 581px;
-  width: 528px;
+  min-height: 610px;
+  max-width: 450px;
+  overflow-y: scroll;
   background-color: var(--contrast-text-color);
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -495,6 +647,8 @@ img {
   color: var(--title-text-color);
   margin-top: 40px;
   margin-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .form {
