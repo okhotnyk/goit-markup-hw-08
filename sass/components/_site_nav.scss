@@ -138,14 +138,13 @@
 
   @include desktop {
    flex-direction: row; 
-   align-items:flex-start;
-  
+   align-items: flex-start;
  }
 }
 
 
 .cont-nav__link--flex {
-  @include desktop{
+  @include tablet {
   display: flex;
   align-items: center;
   }
