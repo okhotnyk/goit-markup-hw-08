@@ -15,11 +15,14 @@
   margin-left: auto;
   margin-right: auto;
 
-  &:not(:last-child) {
-   margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) and  (max-width: 1199.98px){
-  width: calc((100% - 30px)/2);
+    @media screen and (max-width: 767.98px) {
+    &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  }
+
+   @media screen and (min-width: 767.98px) and  (max-width: 1199.98px){
+   width: calc((100% - 30px)/2);
   
     &:nth-child(even) {
     margin-left: 30px;
@@ -27,14 +30,16 @@
     &:not(:nth-child(-n+2)) {
     margin-bottom: 0px;
     }
-}
+   }
 
   @include desktop {
     width: calc((100% - 90px) / 4);
+    margin-bottom: 0px;
+
     &:not(:last-child) {
       margin-right: 30px;
     }
-    }
+  }
 }
 
 
