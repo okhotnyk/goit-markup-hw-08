@@ -1280,6 +1280,7 @@ input:-webkit-autofill:active {
 @media screen and (min-width: 1200px) {
   .team__card {
     width: calc((100% - 90px) / 4);
+    margin-bottom: 0px;
   }
   .team__card:not(:last-child) {
     margin-right: 30px;

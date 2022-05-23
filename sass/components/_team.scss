@@ -50,6 +50,7 @@
 
    @include desktop {
     width: calc((100% - 90px) / 4);
+    margin-bottom: 0px;
 
     &:not(:last-child) {
     margin-right: 30px;
