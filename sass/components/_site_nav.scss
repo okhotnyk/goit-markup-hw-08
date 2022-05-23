@@ -1,11 +1,18 @@
-
+.nav {
+  // position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .nav__site-nav {
  display: none;
 
   @include tablet {
     display: flex; 
-  }
+    align-items: center;
+  } 
 }
 
 .nav__item {
@@ -21,17 +28,33 @@
 
   .nav__site-nav & ~ & {
     margin-left: 50px;
+    }
   }
 
   @include desktop {
     .nav__cont-nav & ~ & {
       margin-left: 30px;
-      }
+    }
   }
 }
-}
+
 
 .nav__link {
+  
+  display: block;
+
+  &:not(:last-child) {
+  padding-bottom: 32px;
+  }
+
+  color: var(--title-text-color);
+  transition: color $trans;
+    
+  &:hover,
+  &:focus,
+  &--current {
+    color: var(--brand-accent-color);
+  
   @include tablet {
   display: none;
   display: block;
@@ -40,14 +63,6 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-text-color);
-
-  transition: color $trans;
-
-  &:hover,
-  &:focus,
-  &--current {
-    color: var(--brand-accent-color);
   }
 
   &--current::after {
@@ -67,7 +82,6 @@
 
 
 .cont-nav__link {
-    display: none;
     color: var(--primary-text-color);
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,32 +97,31 @@
 }
 
 .nav__cont-nav {
-
-@include phone {
   display: none;
-}
 
-@include tablet {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
-  margin-left: auto;
-  padding-top: 0px;
-  padding-bottom: 0px;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
 
-  color: var(--primary-text-color);
+    color: var(--primary-text-color);
 
-  transition: color $trans;
+    transition: color $trans;
 
-  &:hover,
-  &:focus {
-    color: var(--brand-accent-color);
+    &:hover,
+    &:focus {
+      color: var(--brand-accent-color);
+    }
   }
-}
 
   @include desktop {
    flex-direction: row; 
-   align-items: baseline;
+   align-items: center;
+   
  }
 }

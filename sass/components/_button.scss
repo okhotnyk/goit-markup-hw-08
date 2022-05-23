@@ -48,26 +48,26 @@
   }
 }
 
-.menu-button {
-  margin-left: auto;
-  &:hover,
-  &:focus {
-    color: var(--brand-accent-color);
-  }
+// .menu-button {
+//   margin-left: auto;
+//   &:hover,
+//   &:focus {
+//     color: var(--brand-accent-color);
+//   }
 
-    & .icon-cross {
-      display: none;
-    }
+//     & .icon-cross {
+//       display: none;
+//     }
 
-    &.is-open .icon-cross {
-      display: block;
-    }
+//     &.is-open .icon-cross {
+//       display: block;
+//     }
 
-    &.is-open .icon-menu {
-      display: none;
-    }
+//     &.is-open .icon-menu {
+//       display: none;
+//     }
 
-  @include tablet {
-    display: none;
-  }
-}
+//   @include tablet {
+//     display: none;
+//   }
+// }

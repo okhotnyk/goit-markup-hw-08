@@ -13,18 +13,72 @@
 </head>
 <body>
 <header class="header container">
-    <div>
-        <a class="logo logo--preceding link" href="/index.html"><span>Web</span>Studio</a>
-    </div>
-    <div class="menu-button data-menu-button">
-        <svg width="40px" , height="40px" class="icon-close" aria-label="mobile menu switcher">
-            <use class="icon-menu menu-open-btn" href="./images/icons.svg#icon-menu"></use>
-            <use class="icon-cross" href="./images/icons.svg#icon-close_40"></use>
-        </svg>
-    </div>
-    
+    <nav class="nav">
+        <!-- logo -->
+        <div>
+            <a class="logo logo--preceding link" href="/index.html"><span>Web</span>Studio</a>
+        </div>
+
+        <!-- mobile-menu -->
+        <button type="button" class="menu-open-btn">
+            <svg width="40px", height="40px" class="open-icon" aria-label="mobile menu switcher">
+                <use class="icon-open" href="./images/icons.svg#icon-menu"></use>
+                <!-- <use class="icon-cross" href="./images/icons.svg#icon-close_40"></use> -->
+            </svg>
+        </button>
+
+        <div class="mobile__menu">
+            <button type="button" class="menu-close-btn">
+                <svg width="40px", height="40px" class="close-icon" aria-label="mobile menu switcher">
+                    <use class="icon-cross" href="./images/icons.svg#icon-close_40"></use>
+                </svg>
+            </button>
+            <ul class="mobile__site-nav list">
+                <li class="mob-nav__item">
+                    <a class="link nav__link nav__link--current" href="./index.html">Студия</a>
+                </li>
+                <li class="mob-nav__item">
+                    <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mob-nav__item">
+                    <a class="nav__link link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <ul class="mobile__cont-nav list">
+                <li class="mob-nav__item"><a class="mob-cont-nav__link mob-cont-nav__link--phone  link" href="tel:+380961111111">
+                        +38 096 111 11 11</a>
+                </li>
+                <li class="mob-nav__item"><a class="mob-cont-nav__link mob-cont-nav__link--mail link" href="mailto:info@devstudio.com">
+                        info@devstudio.com</a>
+                </li>
+            </ul>
+
+            <ul class="mob-menu-social list">
+                <li class="mob-menu-item">
+                    <a href="#" class="link mobile__link">
+                        Instagram
+                    </a>
+                </li>
+                <li class="mob-menu-item">
+                    <a href="#" class="link mobile__link">
+                        Twitter
+                    </a>
+                </li>
+                <li class="mob-menu-item">
+                    <a href="#" class="link mobile__link">
+                       Facebook
+                    </a>
+                </li>
+                <li class="mob-menu-item">
+                    <a href="#" class="link mobile__link">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+
        <!-- navigation to other pages -->
-    <nav>
+    
            <ul class="nav__site-nav list">
                 <li class="nav__item">
                     <a class="link nav__link nav__link--current " href="./index.html">Студия</a>
@@ -36,8 +90,8 @@
                     <a class="nav__link link" href="#">Контакты</a>
                 </li>
           </ul>
-       </nav>
-       
+   
+    
         <!-- navigation contacts -->
        <ul class="nav__cont-nav list">
            <li class="nav__item"><a class="cont-nav__link link" href="mailto:info@devstudio.com">
@@ -53,6 +107,11 @@
             +38 096 111 11 11</a>
             </li>
        </ul>
+
+
+</nav>
+
+
    
 </header>
 <!-- main -->
@@ -456,6 +515,7 @@
         </div>
     </div>
     </footer>
+        
 
 <script src="./js/modal.js"></script>
 </body>
