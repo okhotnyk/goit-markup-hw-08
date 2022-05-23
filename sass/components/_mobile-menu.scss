@@ -29,6 +29,8 @@
     background-color: var(--contrast-text-color);
     padding: 10px 10px 48px 40px;  
 
+    overflow: auto;
+
 
     @include tablet {
         display: none;

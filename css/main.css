@@ -357,6 +357,7 @@ img {
   height: 100vh;
   background-color: var(--contrast-text-color);
   padding: 10px 10px 48px 40px;
+  overflow: auto;
 }
 @media screen and (min-width: 768px) {
   .mobile__menu {
