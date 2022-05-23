@@ -19,12 +19,13 @@
   @include tablet {
   position: relative;
   font-weight: 500;
+  font-size: 12px;
   @include textParam(1.2, 0.02em);
 
-  .nav__cont-nav & {
-    font-size: 12px;
-    @include textParam(1.2, 0.02em);
-  }
+  @include desktop {
+      font-size: 14px;
+      @include textParam(1.14, null);
+    }
 
   .nav__site-nav & ~ & {
     margin-left: 50px;
@@ -35,6 +36,7 @@
     .nav__cont-nav & ~ & {
       margin-left: 30px;
     }
+
   }
 }
 
@@ -54,29 +56,33 @@
   &:focus,
   &--current {
     color: var(--brand-accent-color);
+  }
   
   @include tablet {
-  display: none;
-  display: block;
-  position: relative;
+    display: none;
+    display: block;
+    position: relative;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
 
-  }
+    &--current::after {
+      content: "";
+      display: inline-block;
+  
+      position: absolute;
+      left: 0px;
+      bottom: -2px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
 
-  &--current::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0px;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-
-    background-color: var(--brand-accent-color);
-  }
+      background-color: var(--brand-accent-color);
+      @include desktop {
+        bottom: -1px;
+      }
+    }
   }
 }
 
@@ -103,7 +109,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+
 
     margin-left: auto;
     padding-top: 0px;
@@ -117,11 +124,29 @@
     &:focus {
       color: var(--brand-accent-color);
     }
+
+   & .nav__item:not(:last-child) {
+    @include tablet {
+      margin-bottom: 10px;
+    }
+
+    @include desktop {
+      margin-bottom: 0px;
+    }
+  }
   }
 
   @include desktop {
    flex-direction: row; 
-   align-items: center;
-   
+   align-items:flex-start;
+  
  }
+}
+
+
+.cont-nav__link--flex {
+  @include desktop{
+  display: flex;
+  align-items: center;
+  }
 }
