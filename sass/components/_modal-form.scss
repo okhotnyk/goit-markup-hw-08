@@ -105,6 +105,10 @@ input:-webkit-autofill:active {
   line-height: 1.25;
 }
 
+.form__policy {
+  margin-top: 20px;
+}
+
 .form__checkbox {
   appearance: none;
   -webkit-appearance: none;
@@ -121,6 +125,9 @@ input:-webkit-autofill:active {
 
 .policy__text {
   font-size: 12px;
+  @include desktop {
+    font-size: 14px;
+  }
 }
 
 .form__link {
