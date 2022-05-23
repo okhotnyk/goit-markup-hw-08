@@ -9,7 +9,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(/images/mobile/Header.jpg);
+    url(/images/mobile/header-mob@1x.jpg);
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,10 +19,18 @@
 
   @include tablet {
     max-width: 1200px;
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(/images/tablet/header-tab@1x.jpg);
   }
 
   @include desktop {
     max-width: 1600px;
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(/images/desktop/header-desk@1x.jpg);
   }
 }
 
