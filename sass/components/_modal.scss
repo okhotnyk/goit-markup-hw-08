@@ -2,11 +2,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
-  width: 100%;
+  width:100%;
   max-width: 450px;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  max-height: 100vh;
   overflow-y: scroll;
 
   background-color: var(--contrast-text-color);
@@ -19,17 +19,17 @@
     transform: translate(-50%, -50%) scale(0.8);
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 480px) {
     width: 95vw;
-    top: 10%;
   }
 
   @include tablet {
+    width: 450px;
     height: 609px;
   }
 
   @include desktop {
-    max-width: 528px;
+    width: 528px;
     
   }
 }
