@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
+    // visibility: none;
     z-index: 2;
     top: 0px;
     left: 0px;
@@ -31,12 +32,21 @@
 
     overflow: auto;
 
+    transform: translateY(0);
+
+    transition: transform, $trans;
+
     @include tablet {
         display: none;
     }
 
     @include desktop {
         display: none;
+    }
+
+    &.is-hidden {
+    transform: translateY(0);
+    visibility: visible;
     }
 }
 
