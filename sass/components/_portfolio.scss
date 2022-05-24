@@ -82,7 +82,7 @@ margin-bottom: 30px;
   height: 100%;
   background-color: var(--brand-accent-color);
   opacity: 90%;
-  color: var(--contrast-text-color);
+  color: transparent;
 
   padding-right: 24px;
   padding-left: 24px;
@@ -92,7 +92,6 @@ margin-bottom: 30px;
   font-size: 18px;
   font-weight: 400px;
   
-
   @include textParam(1.33, null);
 
   transition: transform $trans, color $trans;
@@ -117,21 +116,7 @@ margin-right: auto;
   overflow-y: scroll;
     
   transition: box-shadow $trans;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-
-    & .example__overlay {
-      transform: translateY(-100%);
-    }
-  }
-    & .link:focus .example__overlay {
-      transform: translateY(-100%);
-  }
-
-    
+  
 
   @media screen and (min-width: 220px) and (max-width: 767.98px) {
     &:not(:last-child) {
@@ -169,6 +154,22 @@ margin-right: auto;
     width: calc((100% - 60px) / 3);
   }
 }
+
+.example__link  {
+  &:hover,
+  &:focus {
+    .example__overlay {
+      transform: translateY(-100%);
+    }
+    
+    .example__card> & {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16); 
+    color: var(--contrast-text-color);
+    }
+  }
+}
+
 
 
 
