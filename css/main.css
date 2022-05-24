@@ -826,6 +826,7 @@ img {
   max-width: 450px;
   padding-left: 15px;
   padding-right: 15px;
+  height: auto;
   overflow-y: scroll;
   background-color: var(--contrast-text-color);
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -846,8 +847,9 @@ img {
 }
 @media screen and (min-width: 768px) {
   .modal {
+    padding-left: 0px;
+    padding-right: 0px;
     width: 450px;
-    height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -898,6 +900,7 @@ img {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.03em;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-text-color);
   margin-top: 40px;
@@ -1031,10 +1034,11 @@ input:-webkit-autofill:active {
   display: -ms-flexbox;
   display: flex;
   color: var(--primary-text-color);
-  margin-left: 10px;
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
+  letter-spacing: 0.03em;
+  font-size: 12px;
 }
 
 .policy__text {
@@ -1064,7 +1068,7 @@ input:-webkit-autofill:active {
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   fill: transparent;
-  margin-right: 9px;
+  margin-right: 7px;
   margin-top: 3px;
   -ms-flex-negative: 0;
       flex-shrink: 0;

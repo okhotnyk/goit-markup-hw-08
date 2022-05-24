@@ -2,6 +2,7 @@
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.03em;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-text-color);
   margin-top: 40px;
@@ -119,8 +120,9 @@ input:-webkit-autofill:active {
 .policy__admit {
   display: flex;
   color: var(--primary-text-color);
-  margin-left: 10px;
   align-items: top;
+  letter-spacing: 0.03em;
+  font-size: 12px;
 }
 
 .policy__text {
@@ -149,7 +151,7 @@ input:-webkit-autofill:active {
   border-radius: 2px;
   fill: transparent;
 
-  margin-right: 9px;
+  margin-right: 7px;
   margin-top: 3px;
 
   flex-shrink: 0;
