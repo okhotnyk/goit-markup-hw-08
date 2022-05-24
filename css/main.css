@@ -329,7 +329,7 @@ img {
 .menu-open-btn:hover, .menu-open-btn:focus,
 .menu-close-btn:hover,
 .menu-close-btn:focus {
-  color: var(--brand-accent-color);
+  fill: var(--brand-accent-color);
 }
 @media screen and (min-width: 768px) {
   .menu-open-btn,

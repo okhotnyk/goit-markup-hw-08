@@ -7,7 +7,7 @@
 
 &:hover,
 &:focus {
-    color: var(--brand-accent-color);
+    fill: var(--brand-accent-color);
 }
 
     @include tablet {
