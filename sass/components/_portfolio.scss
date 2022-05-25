@@ -25,13 +25,12 @@ margin-bottom: 30px;
 .expample__wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  align-items: stretch;
 
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-items: stretch;
   }
 
 }
@@ -39,6 +38,7 @@ margin-bottom: 30px;
 .example__photo {
   display: block;
   position: relative;
+  // flex-grow: 0;
 }
 
 .example__name {
@@ -61,16 +61,12 @@ margin-bottom: 30px;
   padding: 20px 24px;
   border: 1px solid var(--borders-card-color);
   border-top: none;
-  
-  @include tablet {
-    flex-grow: 1;
-  }
+  flex-grow: 1;
 }
 
 .example__thumb {
   position: relative;
   overflow: hidden;
-  // overflow-y: scroll;
 }
 
 .example__overlay {
@@ -82,7 +78,7 @@ margin-bottom: 30px;
   height: 100%;
   background-color: var(--brand-accent-color);
   opacity: 90%;
-  color: transparent;
+  color: var(--contrast-text-color);
 
   padding-right: 24px;
   padding-left: 24px;
@@ -103,21 +99,14 @@ margin-bottom: 30px;
   }
 }
 
-.expamle__photo {
-margin-left: auto;
-margin-right: auto;
-}
-
 //  --- grid ---
 
 .example__card {
   position: relative;
   overflow: hidden;
-  overflow-y: scroll;
     
   transition: box-shadow $trans;
   
-
   @media screen and (min-width: 220px) and (max-width: 767.98px) {
     &:not(:last-child) {
         margin-bottom: 30px;
@@ -145,8 +134,6 @@ margin-right: auto;
     }
 
   @include tablet {
-    display: flex;
-    flex-direction: column;
     width: calc((100% - 30px) / 2);
   }
 
@@ -155,7 +142,11 @@ margin-right: auto;
   }
 }
 
-.example__link  {
+.example__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   &:hover,
   &:focus {
     .example__overlay {
